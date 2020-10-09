@@ -1,0 +1,232 @@
+@keyframes floating {
+  from {
+    transform: translate(0, 0px); }
+  65% {
+    transform: translate(0, 5px); }
+  to {
+    transform: translate(0, 0px); } }
+
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+/*
+ * Global layout stuff
+ */
+body {
+  width: 100%;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif; }
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+nav {
+  position: fixed;
+  top: 0;
+  background-color: #d79b23;
+  height: 23vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5em;
+  color: white; }
+  nav span {
+    font-family: "Bungee", cursive;
+    font-size: 8vh; }
+  nav #form-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    nav #form-toggle a {
+      text-decoration: none;
+      color: white; }
+    nav #form-toggle i {
+      color: #ff0000;
+      animation: floating 3s ease-in-out infinite;
+      cursor: pointer; }
+
+header.header-page {
+  max-height: 625px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 42vh;
+  background-color: #d79b23;
+  margin-bottom: 1rem; }
+  header.header-page .header-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 1rem; }
+    header.header-page .header-container div.header-img img {
+      height: 15vh; }
+
+button.btn-tweet {
+  font-family: "Bungee", cursive;
+  font-size: 1rem;
+  background-color: #33539c;
+  color: #f4f1ec;
+  border-radius: 0.5rem;
+  transition: all 0.2s; }
+  button.btn-tweet:active {
+    transform: translateY(0.05rem);
+    box-shadow: 0 0 0;
+    outline: none; }
+
+.scroll-btn {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  background-color: #ff0000;
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: floating 3s ease-in-out infinite; }
+
+section.new-tweet {
+  width: 100%;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0; }
+  section.new-tweet h2 {
+    align-self: flex-start; }
+  section.new-tweet form {
+    display: flex;
+    flex-direction: column;
+    width: 95%; }
+    section.new-tweet form textarea {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 3px solid #545149;
+      height: 2.75rem;
+      outline: none; }
+      section.new-tweet form textarea::placeholder {
+        font-weight: bold;
+        color: #545149;
+        font-size: 1.3rem; }
+    section.new-tweet form div {
+      display: flex;
+      justify-content: space-between; }
+      section.new-tweet form div div.btn-error p {
+        margin: 0 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #ff0000; }
+      section.new-tweet form div output {
+        font-family: "Bungee", cursive;
+        font-size: 1rem; }
+
+section.tweet-container {
+  width: 100%; }
+  section.tweet-container div.article-container {
+    border: 3px solid #545149;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: all 0.5s ease; }
+    section.tweet-container div.article-container:hover {
+      box-shadow: 0.5rem 0.5rem 0.5rem #c7cde2; }
+      section.tweet-container div.article-container:hover header p.handle {
+        color: #c7cde2; }
+    section.tweet-container div.article-container article {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+      width: 95%; }
+      section.tweet-container div.article-container article header {
+        display: flex;
+        justify-content: space-between; }
+        section.tweet-container div.article-container article header div:first-of-type {
+          display: flex;
+          align-items: center; }
+          section.tweet-container div.article-container article header div:first-of-type p {
+            margin: 0 1rem; }
+        section.tweet-container div.article-container article header p.handle {
+          transition: all 0.5s ease;
+          color: #f4f1ec; }
+      section.tweet-container div.article-container article p.tweet {
+        border-bottom: 3px solid #545149;
+        font-weight: bold;
+        margin: 2rem 0 0.5rem 0;
+        padding: 1rem 1rem; }
+      section.tweet-container div.article-container article footer {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+        padding: 0 1rem; }
+      section.tweet-container div.article-container article div i {
+        padding: 0 0.5rem; }
+
+main {
+  width: 85%;
+  margin: 0 auto;
+  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #33539c;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh; }
+  header.header-page {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 5%;
+    max-height: none;
+    pointer-events: none; }
+    header.header-page .header-container {
+      background-color: #d79b23;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 40%;
+      height: 52vh;
+      margin-bottom: -19rem; }
+  header.header-page .header-container div.header-img img {
+    height: 30vh; }
+  main {
+    width: 95%;
+    align-items: flex-end; }
+    main section.new-tweet,
+    main section.tweet-container {
+      width: 50%; }
+    main section.tweet-container {
+      margin-top: 9vh; }
+    main section.new-tweet {
+      margin-top: 15vh; } }
+
+.margin-top-small {
+  margin-top: 0.5rem; }
+
+.warning {
+  color: #ff0000; }

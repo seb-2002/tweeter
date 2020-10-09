@@ -15,3 +15,13 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- Chance
+
+## Functionality
+
+Tweeter is a locally-hosted app. That means that tweets will be saved in the system only as long as the server is kept running.
+
+Tweeter is in the beta stage, meaning there are still a few bugs. We would love to hear about any bugs you find. You can email the developers at sebastiankann@gmail.com.
+
+Tweeter has two layouts: one is intended for desktop computers, and the other for mobile devices. Make sure you try both for the full experience!
