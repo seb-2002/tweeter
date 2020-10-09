@@ -25,3 +25,9 @@ Tweeter is a locally-hosted app. That means that tweets will be saved in the sys
 Tweeter is in the beta stage, meaning there are still a few bugs. We would love to hear about any bugs you find. You can email the developers at sebastiankann@gmail.com.
 
 Tweeter has two layouts: one is intended for desktop computers, and the other for mobile devices. Make sure you try both for the full experience!
+
+## Screenshots
+
+!["Screenshot of the mobile version"](https://github.com/seb-2002/tweeter/blob/master/docs/Mobile%20mode.png)
+
+!["Screenshot of the desktop version"](https://github.com/seb-2002/tweeter/blob/master/docs/Desktop%20mode.png)
